@@ -41,14 +41,14 @@
 %
 % VEL_OUT filtered veolities
 %
-function VEL_OUT = tt_clean_data(VEL_IN,CORR,SNR,AMP)
+function VEL_OUT = tt_clean_data(VEL_IN,CORR,SNR,AMP,apply_rotation,SNR_threshold,CORR_threshold,AMP_threshold)
 
 %% Parameters defined by the user
 % Rotation and thresholds for SNR and CORR
-apply_rotation = 1;
-SNR_threshold = 15;
-CORR_threshold = 40;
-AMP_threshold = 1;
+%apply_rotation = 1;
+%SNR_threshold = 15;
+%CORR_threshold = 40;
+%AMP_threshold = 1;
 
 %% Apply despiking
 % Call the function implementing Goring & Nikora algorithm

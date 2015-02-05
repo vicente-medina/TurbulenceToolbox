@@ -6,17 +6,15 @@
 
 function [meanRS, instantRS] = tt_ReynoldsStresses(velocities)
 
-v_aux = [velocities.x; velocities.y; velocities.z];
-
 vel_prime = tt_prime_velocities(velocities);
 
 % Mean (over time) Reynolds Stresses
-meanRS.xx=mean(vel_prime.x.^2,2);
-meanRS.xy=mean(vel_prime.x.*vel_prime.y,2);
-meanRS.xz=mean(vel_prime.x.*vel_prime.z,2);
-meanRS.yy=mean(vel_prime.y.^2,2);
-meanRS.yz=mean(vel_prime.y.*vel_prime.z,2);
-meanRS.zz=mean(vel_prime.z.^2,2);
+meanRS.xx=mean(vel_prime.x.^2);
+meanRS.xy=mean(vel_prime.x.*vel_prime.y);
+meanRS.xz=mean(vel_prime.x.*vel_prime.z);
+meanRS.yy=mean(vel_prime.y.^2);
+meanRS.yz=mean(vel_prime.y.*vel_prime.z);
+meanRS.zz=mean(vel_prime.z.^2);
 
 % Instant Reynolds Stresses
 instantRS.xx = vel_prime.x.^2;

@@ -99,9 +99,9 @@ function VEL_OUT = tt_despiking(VEL_IN)
     xi = 1:size(vel_3D,1);
 
     % interpolate NaN data
-    VEL_OUT.x(bad_data) = interp1(xi(good_data),VEL_OUT.x(good_data),xi(bad_data),'cubic')';
-    VEL_OUT.y(bad_data) = interp1(xi(good_data),VEL_OUT.y(good_data),xi(bad_data),'cubic')';
-    VEL_OUT.z(bad_data) = interp1(xi(good_data),VEL_OUT.z(good_data),xi(bad_data),'cubic')';
+    VEL_OUT.x(bad_data) = interp1(xi(good_data),VEL_OUT.x(good_data),xi(bad_data),'pchip')';
+    VEL_OUT.y(bad_data) = interp1(xi(good_data),VEL_OUT.y(good_data),xi(bad_data),'pchip')';
+    VEL_OUT.z(bad_data) = interp1(xi(good_data),VEL_OUT.z(good_data),xi(bad_data),'pchip')';
 
 
 end

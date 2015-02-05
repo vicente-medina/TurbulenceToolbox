@@ -10,17 +10,17 @@ water_kin_visc = 10e-6;
 prob = tt_prob_vars(vel);
 
 %% Reynolds Stresses
-tau_re = tt_ReynoldsStresses(vel);
+[tau_re, tau_re_inst] = tt_ReynoldsStresses(vel);
 
 %% Turbulence Percentages
 ti = tt_turb_int(vel,prob.avg);
 
 %% Turbulence Properties
 % Kinetic energy
-turb.tke=(prob.std.x.^2+prob.std.y.^2+prob.std.z.^2)./2;
+turb.tke=mean(prob.std.x.^2+prob.std.y.^2+prob.std.z.^2)./2;
 
 % Viscous energy rate disipation
-delta_x = prob.avg.x * 1 / freq;
+delta_x = prob.avg.x * (1 / freq);
 turb.epsilon = 15*water_kin_visc*mean(gradient(vel.x,delta_x).^2);
 
 %% Kolmogorov scales

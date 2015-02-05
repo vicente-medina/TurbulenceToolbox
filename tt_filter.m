@@ -2,10 +2,10 @@ function VEL_OUT = tt_filter(VEL_IN, CORR, SNR, AMP, SNR_threshold, CORR_thresho
 
 
 %% Create matrix
-vel= [VEL_IN.x; VEL_IN.y; VEL_IN.z];
-corr= [CORR.x; CORR.y; CORR.z];
-snr = [SNR.x; SNR.y; SNR.z];
-amp = [AMP.x; AMP.y; AMP.z];
+vel= [VEL_IN.x VEL_IN.y VEL_IN.z];
+corr= [CORR.x CORR.y CORR.z];
+snr = [SNR.x SNR.y SNR.z];
+amp = [AMP.x AMP.y AMP.z];
 
 
 %% Filter using correlation
@@ -53,11 +53,21 @@ good_data = ~ind;
 xi = 1:size(vel,1);
 
 %interpolate NaN data
-vel = interp1(xi(good_data),vel(good_data),xi(bad_data),'cubic')';
+vel_X = vel(:,1);
+vel_interp_X = interp1(xi(good_data),vel_X(good_data),xi(bad_data),'pchip');
+vel_X(bad_data) = vel_interp_X;
 
-VEL_OUT.x = vel(1,:);
-VEL_OUT.y = vel(2,:);
-VEL_OUT.z = vel(3,:);
+vel_Y = vel(:,2);
+vel_interp_Y = interp1(xi(good_data),vel_Y(good_data),xi(bad_data),'pchip');
+vel_Y(bad_data) = vel_interp_Y;
+
+vel_Z = vel(:,3);
+vel_interp_Z = interp1(xi(good_data),vel_Z(good_data),xi(bad_data),'pchip');
+vel_Z(bad_data) = vel_interp_Z;
+
+VEL_OUT.x = vel_X;
+VEL_OUT.y = vel_Y;
+VEL_OUT.z = vel_Z;
 
 
 end

@@ -15,5 +15,5 @@ The contributors to the project are:
 This toolbox is implemented on  MATLAB platform. It is focused in analyzing ADV/LDV timeseries. It provides several scripts including data filtering, basic statitical analysis and advanced analysis including power spectrum computation. The instruments used to test the program are Sontek Vectrinos and Nortek ADV.
 
 
-		Barcelona Jnuary 2015.
+		Barcelona February 2015.
 

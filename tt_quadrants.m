@@ -10,7 +10,7 @@ y_lim=ceil(max(abs(vel_prime.y))/10)*10;
 z_lim=ceil(max(abs(vel_prime.z))/10)*10;
 
 subplot(1,3,1)
-plot(velocity.x,velocity.y,'b.'); hold on
+plot(vel_prime.x,vel_prime.y,'b.'); hold on
 plot([-x_lim,x_lim],[0,0],'k',[0,0],[-y_lim,y_lim],'k'); hold off
 axis equal
 axis([-x_lim x_lim -y_lim y_lim]);
@@ -20,7 +20,7 @@ xlabel('$V^{\prime}{x}$','Interpreter','LaTex','FontSize',14,'FontWeight','bold'
 ylabel('$V^{\prime}_{y}$','Interpreter','LaTex','FontSize',14,'FontWeight','bold','Rotation',0);
 
 subplot(1,3,2)
-plot(velocity.x,velocity.z,'g.'); hold on
+plot(vel_prime.x,vel_prime.z,'g.'); hold on
 plot([-x_lim,x_lim],[0,0],'k',[0,0],[-z_lim,z_lim],'k'); hold off
 axis equal
 axis([-x_lim x_lim -z_lim z_lim]);
@@ -30,7 +30,7 @@ xlabel('$V^{\prime}_{x}$','Interpreter','LaTex','FontSize',14,'FontWeight','bold
 ylabel('$V^{\prime}_{z}$','Interpreter','LaTex','FontSize',14,'FontWeight','bold','Rotation',0);
 
 subplot(1,3,3)
-plot(velocity.y,velocity.z,'r.'); hold on
+plot(vel_prime.y,vel_prime.z,'r.'); hold on
 plot([-y_lim,y_lim],[0,0],'k',[0,0],[-z_lim,z_lim],'k'); hold off
 axis equal
 axis([-y_lim y_lim -z_lim z_lim]);

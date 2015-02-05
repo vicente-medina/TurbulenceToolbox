@@ -1,11 +1,8 @@
 
-function A=tt_rotation_solver(vel_y, vel_z)
-
-%Data to correct
-vel =[vel_y, vel_z];
+function A=tt_rotation_solver(vel)
 
 %Initial guess
-x0=[0.1; 0.1];
+x0=[0.1 0.1];
 
 %Optimization options
 options=optimset('TolX',1.1*10^(-5),'TolFun',1.1*10^(-7));

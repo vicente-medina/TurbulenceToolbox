@@ -11,7 +11,7 @@
 function VEL_OUT = tt_rotate_axes(VEL_IN)
 
 %Create velocity matrix
-VEL_MATRIX = [VEL_IN.x; VEL_IN.y; VEL_IN.z ];
+VEL_MATRIX = [VEL_IN.x VEL_IN.y VEL_IN.z ];
 
 %Compute average values
 vel_mean = mean(VEL_MATRIX);
@@ -20,6 +20,11 @@ vel_mean = mean(VEL_MATRIX);
 A = tt_rotation_solver(vel_mean);
        
 %Apply the
-VEL_OUT_= VEL_MATRIX * (A');
-        
+VEL_MATRIX_= VEL_MATRIX * (A');
+
+%Convert to structure
+VEL_OUT.x = VEL_MATRIX(:,1);
+VEL_OUT.y = VEL_MATRIX(:,2);
+VEL_OUT.z = VEL_MATRIX(:,3);
+
 end

@@ -2,7 +2,7 @@
 % To draw in a map of bursting turbulence and compare the velocity of the 
 %signal with de velocitiies in the pulse, separated by range of duration.
 
-function [uc,co,nd,dt]=ttt_range_pulse_duration(vel,pul)
+function [uc,co,nd,dt]=tt_range_pulse_duration(vel,pul)
     %% Range from 1 to 4. (0.04 sec to 0.16 sec)
     %Finding the velocities form the duration pulse rang from 1 to 4 steps
     %or 0.04 seconds to 0.16 seconds of the pulse duration.

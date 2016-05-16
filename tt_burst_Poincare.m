@@ -1,4 +1,4 @@
-function [d_VEL_OUT,ind_d_VEL_OUT,m_fit,p_poi]=ttt_burst_Poincare(VEL_OUT,frec,steps)
+function [d_VEL_OUT,ind_d_VEL_OUT,m_fit,p_poi]=tt_burst_Poincare(VEL_OUT,frec,steps)
     [quad,~]=ttt_burst_quadrants(VEL_OUT);
     n=length(VEL_OUT.x);      
     a=1;b=1;c=1; d=1; e=1; f=1; g=1;h=1;l=1;m=1;o=1;p=1;q=1;r=1;s=1;t=1;
@@ -106,7 +106,7 @@ p_44=length(vel(ind_44))*100/n; p44=strcat('4-4=',(num2str(p_44)));
 
 p_poi=[p_11,p_12,p_13,p_14,p_21,p_22,p_23,p_24,p_31,p_32,p_33,p_34,p_41,p_42,p_43,p_44];
 
-%% Figure of all map of Poinacaré... by change of quadrant    
+%% Figure of all map of PoinacarÃ©... by change of quadrant    
 figure(1);
 plot([min(vel) max(vel)],[0 0],'k-',[mean(vel) mean(vel)],[min(d_vel) max(d_vel)],'k-');
 hold on

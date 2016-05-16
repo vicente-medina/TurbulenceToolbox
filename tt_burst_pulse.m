@@ -1,4 +1,4 @@
-function [pul,ind_pul,quad_pul]=ttt_burst_pulse(quad) 
+function [pul,ind_pul,quad_pul]=tt_burst_pulse(quad) 
     %% PULSE CALCULATION 
     %This function allows us to calculate the dwell time in each quadrant or 
     %pulse duration (by steps, 1 step=0.04 seg). 

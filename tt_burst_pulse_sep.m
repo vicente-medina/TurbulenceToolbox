@@ -1,4 +1,4 @@
-function [v_avg_pul_dur,v_avg_mean_pul_dur,v_max_pul_dur,v_max_mean_pul_dur,percent_pul_dur,v_quad_pul_dur]=ttt_burst_pulse_sep(pul,v_avg_pul,v_max_pul,quad_pul)
+function [v_avg_pul_dur,v_avg_mean_pul_dur,v_max_pul_dur,v_max_mean_pul_dur,percent_pul_dur,v_quad_pul_dur]=tt_burst_pulse_sep(pul,v_avg_pul,v_max_pul,quad_pul)
     %% PULSE SEPARATION
     %This function allows us to separate by size pulse duration the results of
     %velocities. Frequency is 25 so each step pulse is 0.04 seconds. The result

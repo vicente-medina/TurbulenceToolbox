@@ -1,4 +1,4 @@
-function [v_max_pul]=ttt_burst_vel_max_pul(VEL_OUT,ind_pul)
+function [v_max_pul]=tt_burst_vel_max_pul(VEL_OUT,ind_pul)
     u = tt_prime_velocities(VEL_OUT);
     %% Auxiliar vector that contains the magnitud of a vector.
     % The target is generate a vector with the maxim norm of the vector

@@ -1,4 +1,4 @@
-function [quad,per]=ttt_burst_quadrants(VEL_OUT)
+function [quad,per]=tt_burst_quadrants(VEL_OUT)
     %% Quadrants
     %First we have to find the quadrant that each pair of (u'w') belongs and 
     %the percentage of permanence in each quadrant

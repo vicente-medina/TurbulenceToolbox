@@ -1,6 +1,6 @@
-function [fvd]=ttt_frec_vel_dur(VEL_OUT,VELMOD)%VEL=input('PROD(0)/MOD(1):');
+function [fvd]=tt_frec_vel_dur(VEL_OUT,VELMOD)%VEL=input('PROD(0)/MOD(1):');
 
-[~,~,velocities_pulse]=ttt_burst_calc_aux(VEL_OUT);
+[~,~,velocities_pulse]=tt_burst_calc_aux(VEL_OUT);
 v_mean=velocities_pulse.average_struct_dur;
 v_quad=velocities_pulse.quad_struct_dur;
 FD=(fieldnames(v_mean));  

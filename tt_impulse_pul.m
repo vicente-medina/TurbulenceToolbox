@@ -2,14 +2,14 @@
 % This function calculates the IMPULSE, WORK and POWER made by each pulse
 % in each quadrant.
 
-function [IMPULSE,WORK,POWER]=ttt_impulse_pul(VEL_OUT,frec,graphics)
+function [IMPULSE,WORK,POWER]=tt_impulse_pul(VEL_OUT,frec,graphics)
 %% Obtaining Useful Variables
-[~,pulse,velocities_pulse]=ttt_burst_calc_aux(VEL_OUT);
+[~,pulse,velocities_pulse]=tt_burst_calc_aux(VEL_OUT);
 ind_pul=pulse.index;
 pul=pulse.duration;
 quad_pul=pulse.quadrant;
 v_avg_pul=velocities_pulse.average;%mean prime velocity at pulse
-[v_avg_pul_tot]=ttt_burst_vel_avg_pul_tot(VEL_OUT,ind_pul); 
+[v_avg_pul_tot]=tt_burst_vel_avg_pul_tot(VEL_OUT,ind_pul); 
 vel_work_power=v_avg_pul_tot.x;%mean velocity at pulse
 
 file='.\TEST\';%define the working folder.

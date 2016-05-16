@@ -2,9 +2,9 @@
 % The function obtains the histograms of the dwell time in a quadrant and 
 % the duration pulse by quadrants.
 
-function [per_dur]=ttt_histograms_quad(VEL_OUT)
+function [per_dur]=tt_histograms_quad(VEL_OUT)
 %% Obtaining useful Variables
-[quadrant,pulse,~]=ttt_burst_calc_aux(VEL_OUT);
+[quadrant,pulse,~]=tt_burst_calc_aux(VEL_OUT);
 per=quadrant.percentage; %Percentage of dwell time in each quadrant of total
 quad_pul=pulse.quadrant;%Quadrant belonging to each pulse
 pul=pulse.duration; %Pulse duration (by steps, 1 step=0.04 seg)

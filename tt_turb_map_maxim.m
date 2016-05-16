@@ -5,10 +5,10 @@
 %from each pulse duration. Also is possible to draw this pair by range of
 %pulse durations.
 
-function ttt_turb_map_maxim(VEL_OUT)
+function tt_turb_map_maxim(VEL_OUT)
     %% Obtaining useful variables
   u = tt_prime_velocities(VEL_OUT);
-  [~,pulse,velocities_pulse]=ttt_burst_calc_aux(VEL_OUT);
+  [~,pulse,velocities_pulse]=tt_burst_calc_aux(VEL_OUT);
 
    %% Map of bursting turbulence from the signal (not pulses)
    % Blue points in the map
@@ -44,7 +44,7 @@ function ttt_turb_map_maxim(VEL_OUT)
    % (5-8 steps, 0.20 to 0.32 seconds), (9-16 steps, 0.36 to 0.64 seconds),
    % (17-32 steps, 0.68 to 1.28 seconds), for example. In that case we call
    % the next function.
-   [uc,co,nd,dt]=ttt_range_pulse_duration(velocities_pulse.maxim,pulse.duration);
+   [uc,co,nd,dt]=tt_range_pulse_duration(velocities_pulse.maxim,pulse.duration);
    
    %% Drawing range 1 to 4 steps (0.04 a 0.16 sec.) 
    % Magenta Points

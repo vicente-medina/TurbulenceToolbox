@@ -1,4 +1,4 @@
-function [v_avg_pul]=ttt_burst_vel_avg_pul_tot(VEL_OUT,ind_pul)
+function [v_avg_pul]=tt_burst_vel_avg_pul_tot(VEL_OUT,ind_pul)
    %% Average Velocities primes in each duration pulse
    %v_avg_pul= Structure of u'average and w'average for each pulse
     u = VEL_OUT;
